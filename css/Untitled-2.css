@@ -1,0 +1,148 @@
+/* Réinitialisation des styles par défaut */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Style de base pour le corps de la page */
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    padding: 20px;
+    background-image: url("background.jpg");
+    background-size: cover;
+  }
+  
+  /* Style pour l'en-tête */
+  header {
+    background-color: rgba(225, 119, 5, 0.7);
+    color: #ffffff;
+    padding: 10px;
+  }
+  
+  header h1 {
+    margin: 0;
+    padding: 10px;
+    animation: fadeInDown 1s ease;
+    animation: colorChange 2s infinite alternate ;
+  }
+  
+  @keyframes fadeInDown {
+    0% {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav ul li {
+    display: inline;
+  }
+  
+  nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+    animation: colorChange 2s infinite alternate;
+  }
+  
+  @keyframes colorChange {
+    0% {
+      color: #fff;
+    }
+    50% {
+      color: #ffeb3b;
+    }
+    100% {
+      color: #fff;
+    }
+  }
+  
+  /* Style pour les sections */
+  section {
+    margin-bottom: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 5px;
+  }
+  
+  section h2 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+  }
+  
+  /* Style pour le formulaire */
+  form {
+    margin-top: 10px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  input[type="number"] {
+    width: 50px;
+  }
+  
+  /* Définir la taille des images dans la galerie */
+.image-gallery img {
+    width: 200px;
+    height: 150px;
+    object-fit: cover;
+  }
+  
+  /* Positionner les images en utilisant une grille CSS */
+  .image-gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+  }
+  
+  /* Ajouter une animation de transition aux images */
+  .image-gallery img {
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  /* Ajouter une animation de zoom au survol des images */
+  .image-gallery img:hover {
+    transform: scale(1.1);
+  }
+  
+  /* Ajouter une animation de fondu enchaîné aux images */
+  .image-gallery img {
+    opacity: 0;
+    animation-name: fade;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-delay: calc(var(--animation-delay) * var(--animation-index));
+  }
+  
+  @keyframes fade {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  
+  /* Style pour le pied de page */
+  footer {
+    background-color: rgb(255, 0, 0);
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+  }
+ 
